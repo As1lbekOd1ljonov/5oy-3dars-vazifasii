@@ -122,7 +122,17 @@ ALTER TABLE student RENAME COLUMN last_name TO family_name;
 ALTER TABLE class RENAME COLUMN class_name TO name;
 
 
+ALTER TABLE schools ADD COLUMN established_year INT;
+ALTER TABLE teachers ADD COLUMN hire_date DATE;
+
+
 ALTER TABLE class DROP COLUMN teacher_id;
+
+
+UPDATE schools SET name = 'Maktab 1 Yangilangan' WHERE school_id = 1;
+UPDATE teachers SET email = 'ToxirToxirovNew1234@gmail.com' WHERE teacher_id = 1;
+UPDATE student SET given_name = 'Toxirjon' WHERE student_id = 1;
+UPDATE grade SET grade_value = 95 WHERE garde_id = 1;
 
 
 DELETE FROM attendance WHERE attendance_id = 1;
